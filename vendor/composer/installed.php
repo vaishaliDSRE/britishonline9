@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '30f333e469f25cb5f7dde9558e66d26ab6f4ed73',
+    'reference' => '669a66022a63b35c2a3c646bc181b5fb17921a7c',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -99,12 +99,12 @@
     ),
     'facade/ignition' => 
     array (
-      'pretty_version' => '2.10.2',
-      'version' => '2.10.2.0',
+      'pretty_version' => '2.11.0',
+      'version' => '2.11.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '43688227bbf27c43bc1ad83af224f135b6ef0ff4',
+      'reference' => 'dc6818335f50ccf0b90284784718ea9a82604286',
     ),
     'facade/ignition-contracts' => 
     array (
@@ -126,12 +126,12 @@
     ),
     'filp/whoops' => 
     array (
-      'pretty_version' => '2.13.0',
-      'version' => '2.13.0.0',
+      'pretty_version' => '2.14.0',
+      'version' => '2.14.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2edbc73a4687d9085c8f20f398eebade844e8424',
+      'reference' => 'fdf92f03e150ed84d5967a833ae93abffac0315b',
     ),
     'fruitcake/laravel-cors' => 
     array (
@@ -413,7 +413,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '30f333e469f25cb5f7dde9558e66d26ab6f4ed73',
+      'reference' => '669a66022a63b35c2a3c646bc181b5fb17921a7c',
     ),
     'laravel/tinker' => 
     array (

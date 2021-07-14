@@ -13,9 +13,10 @@
   <link rel="stylesheet" href="{{asset('css/user/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{asset('css/user/font-awesome.css')}}">
   <link rel="stylesheet" href="{{ asset('css/user/style.css') }}">
+	<script src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
 </head>
 <body>
-  @include('users.includes.header')
+  @include('users.includes.header')	
   @include('users.includes.carausal')
   <div>
     @yield('content')
@@ -23,9 +24,8 @@
   @include('users.includes.footer')
   @yield('js-script')
   <script src="{{ asset('js/app.js') }}"></script>
-  <script src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
   <script src="{{asset('js/custom.js')}}"></script>
-  <script src="{{asset('js/jquery-3.2.1.slim.min.js')}}"></script>
+  <!-- <script src="{{asset('js/jquery-3.2.1.slim.min.js')}}"></script> -->
   <script src="{{asset('js/popper.min.js')}}"></script>
   <script src="{{asset('js/bootstrap.min.js')}}"></script>
 </body>

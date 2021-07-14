@@ -17,6 +17,8 @@ Route::group(['middleware' => ['web'],'domain' => 'britishonline9.dl'], function
     Route::get('/', function () {
         return view('users.index');
     });
+
+		Route::get('front-slider',['as' => 'front-slider', 'uses' => 'FrontendController@front_slider']);
     
     Route::group(['namespace' => 'User', 'as' => 'users.'],function(){
         // Route::get('/',['as' => 'index', 'uses' => 'UserController@index']);
