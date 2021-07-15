@@ -17,4 +17,7 @@ class HomeController extends Controller
     public function createId(){
         return view('admin.create_id');
     }
+    public function exchange_id_request(){
+		return view('admin.exchange_id_req');
+	}
 }

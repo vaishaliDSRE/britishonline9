@@ -21,8 +21,5 @@ class AdminGamezoneController extends Controller
 	}
 	public function ludo_game(){
 		return view('admin.gamezone.ludo_game');
-	}
-	public function exchange_id_request(){
-		return view('admin.exchange_id_req');
-	}
+	}	
 }
