@@ -59,9 +59,9 @@
                         <i class="fa fa-cogs  micon" aria-hidden="true"></i><span class="mtext">Setting </span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="./Add poster.html">Add Poster</a></li>
-                        <li><a href="./Add rules.html">Add Rules</a></li>
-                        <li><a href="./add exch.html">Create ID</a></li>
+                        <li><a href="{{route('admin.poster')}}">Add Poster</a></li>
+                        <li><a href="{{route('admin.rules')}}">Add Rules</a></li>
+                        <li><a href="{{route('admin.createId')}}">Create ID</a></li>
                         <li><a href="./wallet.html">Wallet</a></li>
                     </ul>
                 </li>
