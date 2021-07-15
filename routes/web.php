@@ -51,6 +51,15 @@ Route::group(['middleware' => ['web'],'domain' => 'ag.britishonline9.dl'], funct
 		Route::get('/table-game',['as' => 'table-game', 'uses' => 'AdminGamezoneController@table_game']);
 		Route::get('/ludo-game',['as' => 'ludo-game', 'uses' => 'AdminGamezoneController@ludo_game']);
 		Route::get('/exchange-id-req',['as' => 'exchange-id-req', 'uses' => 'AdminGamezoneController@exchange_id_request']);
-	});
+        Route::get('/profile',['as' => 'profile', 'uses' => 'HomeController@profile']);
+        Route::get('/password',['as' => 'password', 'uses' => 'HomeController@password']);
+        Route::get('/poster',['as' => 'poster', 'uses' => 'PosterController@index']);
+        Route::get('/rules',['as' => 'rules', 'uses' => 'RuleController@index']);
+        Route::get('/createId',['as' => 'createId', 'uses' => 'HomeController@createId']);
+        Route::get('/wallet',['as' => 'wallet', 'uses' => 'WalletController@index']);
 
+        Route::group(['namespace' => 'Auth', 'as' => 'auth.'],function(){
+            Route::get('login',['as' => 'login', 'uses' => 'LoginController@showLoginForm'])->middleware('guest');
+	    });
+	});
 });

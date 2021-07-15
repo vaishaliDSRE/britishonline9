@@ -13,6 +13,8 @@
 	</a>
 </div>
 
+<script src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
+
 <script>
 $(document).ready(function() {
 	$.ajax({
