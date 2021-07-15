@@ -1,90 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Britishonline9</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="" sizes="180x180" href="{{ asset('images/logo.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/logo.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/logo.png') }}">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/user/style.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{ asset('css/user/style.css') }}">
+  <link rel="stylesheet" href="{{asset('css/user/bootstrap.min.css')}}">
+  <title>BritishOnline9</title>
 </head>
-<body class="body">
-    <div class="cont">
-        <div class="form sign-in">
-        <h2>Sign In</h2>
-        <label>
-            <span>Contact Number</span>
-            <input type="email" name="text">
-        </label>
-        <label>
-            <span>Password</span>
-            <input type="password" name="password">
-        </label>
-        <button class="submit" type="button">Sign In</button>
-        <p class="forgot-pass">Contact with social media</p>
-
-        <div class="social-media">
-            <ul>
-            <li><a href=""><img src="{{ asset('images/whatsapp.png.crdownload') }}"></li></a>
-            <li><a href="https://www.instagram.com/britishonline9/"><img src="{{ asset('images/instagram.png') }}"></li></a>
-            <li><a href="https://t.me/britishonline999"><img src="{{ asset('images/telegram.png.crdownload') }}"></li></a>
-            <li><a href="https://m.facebook.com/Britishonline9-101040395193843/posts"><img src="{{ asset('images/facebook.png') }}"></li></a>
-            </ul>
-        </div>
-        </div>
-
-        <div class="sub-cont">
-        <div class="img">
-            <div class="img-text m-up">
-            <a href="./index.html">
-            <img src="{{ asset('images/logo.png') }}" alt=""></a>
-            <h2>New here?</h2>
-            <p>Sign up and discover great amount of new opportunities!</p>
-            </div>
-            <div class="img-text m-in">
-            <a href="./index.html">
-                <img src="{{ asset('images/logo.png') }}" alt=""></a>
-            <h2>One of us?</h2>
-            <p>If you already has an account, just sign in. We've missed you!</p>
-            </div>
-            <div class="img-btn">
-                <span class="m-up">Sign Up</span>
-                <span class="m-in">Sign In</span>
-            </div>
-        </div>
-        <div class="form sign-up">
-            <h2>Sign Up</h2>
-            <label>
-                <span>Name</span>
-                <input type="text">
-            </label>
-            <label>
-                <span>Contact Number</span>
-                <input type="text">
-            </label>
-            <label>
-                <span>Password</span>
-                <input type="password">
-            </label>
-            <label>
-                <span>Confirm Password</span>
-                <input type="password">
-            </label>
-            <button type="button" class="submit">Sign Up Now</button>
-        </div>
-        </div>
-    </div>
-    <script src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
-    <script src="{{asset('js/custom.js')}}"></script>
-    <script>
-        $(document).ready(function(){
-            document.querySelector('.img-btn').addEventListener('click', function()
-            {
-                document.querySelector('.cont').classList.toggle('s-signup')
-            });
-        });
-    </script>
+<body class="log">
+	<div class="login-wrapper">
+		{{ Form::open(array('url'=>'login','autocomplete'=>'off','id'=>'signIn','class'=>'form2')) }}
+			<img src="{{ asset('images/logo.png') }}" alt="">
+			<h2>Login</h2>
+				@if ($errors->any())
+					<div class="alert alert-danger">
+						<ul>
+							@foreach ($errors->all() as $error)
+								<li>{{ $error }}</li>
+							@endforeach
+						</ul>
+					</div>
+				@endif
+				@if(Session::has("success"))
+					<div class="alert alert-success">
+						{{Session::get("success")}}
+					</div>
+				@elseif(Session::has("failed"))
+					{{Session::get("failed")}}
+				@endif
+			<div class="input-group">
+			{{ Form::text('userid','',['placeholder'=>'User Name']) }} 
+			</div>
+			<div class="input-group">
+			{{ Form::password('password',['placeholder'=>'password'])}}
+			</div>
+			{{ Form::submit('Login',['class' => 'submit-btn'])}}
+			<a href="{{'/register'}}" class="forgot-pw"><span class="login-btn" style="text-align: center;margin-top: 5px;">Sign Up</span></a>
+		{{ Form::close() }}
+	</div>
+	<script src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
+	<script src="{{asset('js/popper.min.js')}}"></script>
+	<script src="{{asset('js/jquery.validate.min.js')}}"></script>
+	<script>
+		$(document).ready(function() {
+			$("#signIn").validate(
+				{
+					rules:     	{
+									userid: {
+											required: true,
+											maxlength: 20
+										},
+									password: {
+											required: "Username is required",
+											maxlength: "First name cannot be more than 20 characters",
+										},
+								},
+					messages:   {
+									userid: {
+											required: "Username is required",
+											minlength: "Username must be at least 4 number",
+									},
+									password: {
+											required: "Password number is required",
+											minlength: "Password number must be of 6 digits",
+									}
+								}
+				});     
+			});
+	</script>
 </body>
 </html>

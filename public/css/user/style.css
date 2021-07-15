@@ -957,7 +957,7 @@ subscribe
   cursor: pointer;
 }
 .service-work .service-work-vertical {
-	background: rgb(0,0,0);
+  background: rgb(0,0,0);
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 33.33%, rgba(255,255,255,1) 66.66%, rgba(255,255,255,0) 99.99%);
   background-size: 300% 300%;
   background-position: 0% 100%;
@@ -1210,12 +1210,57 @@ responsive
 --------------------------------------------- 
 */
 
+@media (max-width: 992px) {
+   .cont {
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    height: 550px;
+    background: #fff;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
+}
 
+.form{
+  position: relative;
+  width: 300px;
+  height: 100%;
+  padding: 50px 30px;
+  -webkit-transition:-webkit-transform 1.2s ease-in-out;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+.submit2{
+  display: block;
+}
+}
 @media (max-width: 992px) {
 
   .main-banner .caption h2 {
     font-size: 64px;
   }
+  .cont {
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    height: 550px;
+    background: #fff;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
+}
+
+.form{
+  position: relative;
+  width: 300px;
+  height: 100%;
+  padding: 50px 30px;
+  -webkit-transition:-webkit-transform 1.2s ease-in-out;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+.submit2{
+  display: block;
+}
   .card{
     position: relative;
     max-width: 330px;
@@ -1734,6 +1779,22 @@ footer a.text-light:hover {
   margin: 34px 8px 8px 0px;
   cursor: pointer;
 }
+.idd-button {
+  border-radius: 5px;
+  background: -webkit-linear-gradient(left, #006666, #339966);
+  padding: 15px 50px;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.idd-button a{
+ color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
 .active1{
   background-color: #4caf4f00;
   border: 1px solid green;
@@ -1904,6 +1965,19 @@ button{
 }
 
 .submit:hover{
+  background: red;
+}
+submit2{
+  margin-top: 40px;
+  display: none;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
+  background: -webkit-linear-gradient(left, #006666, #339966);
+}
+
+.submit2:hover{
   background: red;
 }
 .sub-cont .img .img-text p{
@@ -2192,7 +2266,7 @@ button{
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background: url('../../images/images.jpeg') no-repeat center / cover;
+  background: url('../images/images.jpeg') no-repeat center / cover;
   border: 4px solid #ffffff;
   margin-bottom: 2px;
   overflow: hidden;
@@ -2346,12 +2420,12 @@ button{
   display: block;
 }
 .containerr .checkmark:after {
- 	top: 9px;
-	left: 9px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: white;
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
 }
 @media (max-width: 410px){
   .content{
@@ -2362,10 +2436,36 @@ button{
   }
 }
 
-@media (max-width: 370px){
+@media (max-width: 380px){
   .header{
       height: 230px;
   }
+  .cont {
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    height: 550px;
+    background: #fff;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
+}
+
+.form{
+  position: relative;
+  width: 300px;
+  height: 100%;
+  padding: 50px 30px;
+  -webkit-transition:-webkit-transform 1.2s ease-in-out;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+.submit2{
+  display: block;
+}
+ .social-media img{
+  width: 20px;
+  height: 20px;
+ }
 
   .card:before{
       clip-path: circle(400px at 50% -74.5%);
@@ -2404,3 +2504,181 @@ button{
       font-size: .6rem;
   }
 }
+
+
+/* login & Sign */
+
+.log {
+  background: url('../../images/aaa.jpg') no-repeat center;
+  background-size: cover;
+  font-family: sans-serif;
+  height: 100vh;
+}
+.login-wrapper {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form2 {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  max-width: 380px;
+  padding: 80px 40px 40px;
+  background: rgba(0, 0, 0, 0.897);
+  border-radius: 50px;
+  color: #fff;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+.form2::before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255, 0.08);
+  transform: skewX(-26deg);
+  transform-origin: bottom left;
+  border-radius: 10px;
+  pointer-events: none;
+}
+.form2 img {
+  position: absolute;
+  top: -30px;
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 20%;
+  border-radius: 50%;
+}
+#d {
+  position: absolute;
+  top: -30px;
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 13%;
+  border-radius: 50%;
+}
+.form2 h2 {
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+.form2 .input-group {
+  position: relative;
+}
+.form2 .input-group input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+}
+.form2 .input-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-bottom: 20px;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: .3s ease-out;
+}
+.form2 .input-group input:focus + label,
+.form2 .input-group input:valid + label {
+  transform: translateY(-18px);
+  color: #107063;
+  font-size: .8rem;
+}
+.submit-btn {
+  display: block;
+  margin-left: auto;
+  background: #107063;
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.login-btn {
+  display: block;
+  margin-left: auto;
+  border:2px solid #107063;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.login-btn:hover{
+  background-color: #107063;
+}
+
+.page-header{
+  background-color: #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 28px rgba(0, 0, 0, .08);
+  -moz-box-shadow: 0px 0px 28px rgba(0, 0, 0, .08);
+  box-shadow: 0px 0px 28px rgba(0, 0, 0, .08);
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.page-header h3{
+  padding-top: 10px;
+}
+.border a{
+  background-color: #006666;
+  padding: 10px 20px;
+  color: #fff;
+}
+.form-controll{
+ padding: 0px 10px 0px 0px;
+ width: 110px;
+ text-align: center;
+ border-radius: 20px;
+  border: 1px solid rgb(0, 0, 0);
+}
+.form-controll h6{
+  padding: 0px 10px;
+  font-size: 50px;
+}
+.form-controll a{
+  padding: 0px 10px;
+  margin-left: 20px;
+  text-align: center;
+  float: right;
+ border-radius: 20px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #006666;
+ }
+
+ /* gajanan*/
+ #signIn label{
+  margin: 65px auto 0 !important;
+  color: #dc3545 !important;
+  font-size: 14px !important;
+ }
+ #signUp label{
+  margin: 65px auto 0 !important;
+  color: #dc3545 !important;
+  font-size: 14px !important;
+ }
+ label.error {
+  color: #dc3545;
+  font-size: 14px;
+ }
+ /* gajanan*/

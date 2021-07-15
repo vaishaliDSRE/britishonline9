@@ -33,7 +33,11 @@ Route::group(['middleware' => ['web'],'domain' => 'britishonline9.dl'], function
         Route::group(['namespace' => 'Auth', 'as' => 'auth.'],function(){
             Route::get('login',['as' => 'login', 'uses' => 'LoginController@showLoginForm'])->middleware('guest');
             Route::post('login',['as' => 'login', 'uses' => 'LoginController@login'])->middleware('guest');
+
+            Route::get('register',['as' => 'register', 'uses' => 'LoginController@showRegistrationForm'])->middleware('guest');
+            Route::post('register',['as' => 'register', 'uses' => 'LoginController@register'])->middleware('guest');
         });
+        
     });
 });
 
