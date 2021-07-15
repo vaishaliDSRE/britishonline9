@@ -17,6 +17,8 @@ Route::group(['middleware' => ['web'],'domain' => 'britishonline9.dl'], function
     Route::get('/', function () {
         return view('users.index');
     });
+
+	Route::get('front-slider',['as' => 'front-slider', 'uses' => 'FrontendController@front_slider']);
     
     Route::group(['namespace' => 'User', 'as' => 'users.'],function(){
         // Route::get('/',['as' => 'index', 'uses' => 'UserController@index']);
@@ -45,8 +47,14 @@ Route::group(['middleware' => ['web'],'domain' => 'ag.britishonline9.dl'], funct
     Route::get('/', function () {
         return view('admin.index');
     });
-
-    Route::group(['namespace' => 'Admin', 'as' => 'admin.'],function(){
+	Route::group(['namespace' => 'Admin', 'as' => 'admin.'],function(){
+		Route::get('/real-worli',['as' => 'real-worli', 'uses' => 'WorliMatkaController@realWorli']);
+		Route::get('/indian-casino',['as' => 'indian-casino', 'uses' => 'AdminGamezoneController@indian_casino']);
+		Route::get('/live-casino',['as' => 'live-casino', 'uses' => 'AdminGamezoneController@live_casino']);
+		Route::get('/casino-userlist',['as' => 'casino-userlist', 'uses' => 'AdminGamezoneController@all_casino_userlist']);
+		Route::get('/table-game',['as' => 'table-game', 'uses' => 'AdminGamezoneController@table_game']);
+		Route::get('/ludo-game',['as' => 'ludo-game', 'uses' => 'AdminGamezoneController@ludo_game']);
+		Route::get('/exchange-id-req',['as' => 'exchange-id-req', 'uses' => 'HomeController@exchange_id_request']);
         Route::get('/profile',['as' => 'profile', 'uses' => 'HomeController@profile']);
         Route::get('/password',['as' => 'password', 'uses' => 'HomeController@password']);
         Route::get('/poster',['as' => 'poster', 'uses' => 'PosterController@index']);
@@ -57,5 +65,5 @@ Route::group(['middleware' => ['web'],'domain' => 'ag.britishonline9.dl'], funct
         Route::group(['namespace' => 'Auth', 'as' => 'auth.'],function(){
             Route::get('login',['as' => 'login', 'uses' => 'LoginController@showLoginForm'])->middleware('guest');
 	    });
-    });
+	});
 });
