@@ -43,6 +43,6 @@ Route::group(['middleware' => ['web'],'domain' => 'britishonline9.dl'], function
 
 Route::group(['middleware' => ['web'],'domain' => 'ag.britishonline9.dl'], function () {
     Route::get('/', function () {
-        // return view('users.index');
+        return view('admin.index');
     });
 });
