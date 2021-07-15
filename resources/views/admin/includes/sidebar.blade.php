@@ -16,7 +16,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="real worli.html" class="dropdown-toggle no-arrow">
+                    <a href="{{ route('admin.real-worli') }}" class="dropdown-toggle no-arrow">
                         <i class="fa fa-exchange micon" aria-hidden="true"></i><span class="mtext">Real Worli</span>
                     </a>
                 </li>
@@ -25,14 +25,14 @@
                         <i class="fa fa-cogs  micon" aria-hidden="true"></i><span class="mtext">Game Zone </span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="./indian casino.html">Casino</a></li>
-                        <li><a href="./Live casino.html">Live Casino</a></li>
-                        <li><a href="./table.html">Tables</a></li>
-                        <li><a href="./ludo.html">Ludo</a></li>
+                        <li><a href="{{ route('admin.indian-casino') }}">Casino</a></li>
+                        <li><a href="{{ route('admin.live-casino') }}">Live Casino</a></li>
+                        <li><a href="{{ route('admin.table-game') }}">Tables</a></li>
+                        <li><a href="{{ route('admin.ludo-game') }}">Ludo</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./exch-id-req.html" class="dropdown-toggle no-arrow">
+                    <a href="{{ route('admin.exchange-id-req') }}" class="dropdown-toggle no-arrow">
                         <i class="fa fa-exchange micon" aria-hidden="true"></i><span class="mtext">Exchange Id Request</span>
                     </a>
                 </li>
